@@ -1,6 +1,6 @@
 <?php
 //Get the number for the current hour (24 clock)
-$hour =
+$hour;
 
 
 //Decide the text depending on current time (we will also use this as ID for CSS)
