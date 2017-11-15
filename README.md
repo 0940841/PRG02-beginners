@@ -54,6 +54,7 @@ Gebruik de muziektabel uit de vorige les ([opdracht 1.3](#opdracht1-3)).
 
 Voeg aan elke rij een "Detail" link toe. Deze linkt naar een pagina waarin alleen de gegevens van dat album getoond worden. Maak ook de detailpagina en gebruik css voor een gepaste opmaak.
 
+<a id="opdracht23"></a>
 #### Opdracht 2.3
 Gebruik de muziektabel uit de vorige opdracht ([opdracht 2.2](#opdracht2-2))
 
@@ -62,7 +63,7 @@ Wanneer op verzenden geklikt wordt, gaat de bezoeker naar een andere pagina waar
 
 <a id="opdracht2-4"></a>
 #### Opdracht 2.4
-Voeg aan de vorige opdracht ([opdracht 2.3](#opdracht2-3)) een "Create" link toe, boven de tabel.
+Voeg aan de vorige opdracht ([opdracht 2.3](#opdracht23)) een "Create" link toe, boven de tabel.
 Na het aanklikken van de create wordt de bijbehorende pagina geladen met een formulier waarvan de velden overeenkomen met de gegevens van een album. Elke veld is voorzien van validatie waarbij geldt:
 - Elke veld uit het formulier is een verplicht veld
 - Het veld met het aantal tracks van het album moet een getal bevatten.
@@ -104,7 +105,7 @@ Ook zal de pagina voorzien moeten zijn van validatie. Het controleren van de inp
 <a id="opdracht4-3"></a>
 #### Opdracht 4.3
 
-Ga verder met [opdracht 2.3](#opdracht2-3) zodat de data in het editformulier automatisch gevuld wordt vanuit de database. (Je zal zien dat deze pagina voor een zeer groot deel overeenkomt met die van [opdracht 4.2](#opdracht4-2).)
+Ga verder met [opdracht 2.3](#opdracht23) zodat de data in het editformulier automatisch gevuld wordt vanuit de database. (Je zal zien dat deze pagina voor een zeer groot deel overeenkomt met die van [opdracht 4.2](#opdracht4-2).)
 
 Ook zal de pagina voorzien moeten zijn van validatie. Het controleren van de input-velden gebeurt dmv een postback (tip: if(isset())
 
