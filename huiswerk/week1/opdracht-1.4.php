@@ -2,7 +2,7 @@
 //Fill in your own birthday
 $birthday = "0510";
 
-//List of constellations per date range
+//List of constellations per date range [monthday]
 $constellations = [
     [
         "startDate" => "0121",
@@ -76,7 +76,16 @@ $constellations = [
  */
 function getConstellationForBirthday($birthday, $constellations)
 {
-    
+    //Default constellation is Steenbok all other will be checked in foreach
+    $result = 'Steenbok';
+
+    foreach ($constellations as $constellation) {
+        if ($birthday >= $constellation['startDate'] && $birthday < $constellation['endDate']) {
+            $result = $constellation['name'];
+        }
+    }
+
+    return $result;
 }
 
 //Call the function to retrieve your own constellation

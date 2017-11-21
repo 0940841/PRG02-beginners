@@ -1,18 +1,20 @@
 <?php
 //Get the number for the current hour (24 clock)
-$hour;
+$hours = date('G');
 
 
-//Decide the text depending on current time (we will also use this as ID for CSS)
-if ($hour )
+//Decide the text depending on current time.
+// 00, 01, 02, 03, 04, 05
+if ($hours < 6)
 {
     $period = 'nacht';
 }
-elseif ($hour )
+// 06, 07, 08, 09, 10 ,11
+elseif ($hours < 12)
 {
     $period = 'morgen';
 }
-elseif ($hour )
+elseif ($hour < 18)
 {
     $period = 'middag';
 }

@@ -1,6 +1,7 @@
 <?php
 //Multi dimensional array with the music collection data
-$musicAlbums = [
+$musicAlbums =
+[
     [
         'artist' => 'Muse',
         'album' => 'Live At Rome Olympic Stadium',
@@ -99,6 +100,16 @@ $musicAlbums = [
         </tr>
     </tfoot>
     <tbody>
+    <?php foreach ($musicAlbums as $index => $album) { ?>
+        <tr>
+            <td><?= $index + 1 ?></td>
+            <td><?= $album['artist'] ?></td>
+            <td><?= $album['album'] ?></td>
+            <td><?= $album['genre'] ?></td>
+            <td><?= $album['year'] ?></td>
+            <td><?= $album['tracks'] ?></td>
+        </tr>
+    <?php } ?>
     </tbody>
 </table>
 </body>
