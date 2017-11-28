@@ -3,6 +3,12 @@ label {
     width: 80px;
     font-weight: bold;
 }
+input {
+    width: 200px;
+}
+input[type=submit] {
+    width: auto;
+}
 footer {
 
 }

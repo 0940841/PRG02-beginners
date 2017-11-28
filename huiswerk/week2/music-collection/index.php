@@ -19,6 +19,8 @@ require_once 'includes/music-data.php';
             <th>Genre</th>
             <th>Year</th>
             <th>Tracks</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tfoot>
@@ -35,9 +37,24 @@ require_once 'includes/music-data.php';
             <td><?= $album['genre'] ?></td>
             <td><?= $album['year'] ?></td>
             <td><?= $album['tracks'] ?></td>
+            <td><a href="details.php?index=<?= $index ?>">Details</a></td>
+            <td><a href="edit.php?index=<?= $index ?>">Edit</a></td>
         </tr>
     <?php } ?>
     </tbody>
 </table>
+<a href="create.php">Create new album</a>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

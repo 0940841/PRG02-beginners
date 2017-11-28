@@ -5,11 +5,9 @@
  * Date: 21/11/2017
  * Time: 13:29
  */
-//Multi dimensional array with the music collection data
 $musicAlbums =
     [
         [
-
             'artist' => 'Muse',
             'album' => 'Live At Rome Olympic Stadium',
             'genre' => 'Rock',

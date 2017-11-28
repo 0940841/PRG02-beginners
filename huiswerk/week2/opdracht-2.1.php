@@ -1,7 +1,9 @@
 <?php
-//$today
+//today
+$today = date("d-m-y H:i");
 
-//$lastWeek
+//lastWeek
+$lastWeek = date("d-m-y H:i", strtotime("-1 week"));
 
 /**
  * Calculate difference & convert to days
@@ -12,7 +14,10 @@
  */
 function getDifferenceBetweenDates($firstDate, $lastDate)
 {
+    $difference = $lastDate - $firstDate;
+    $differenceDays = round( $difference / (24 * 60 * 60) );
 
+    return $differenceDays;
 }
 
 /**
@@ -23,7 +28,16 @@ function getDifferenceBetweenDates($firstDate, $lastDate)
  */
 function getNightsTillBirthday($birthday)
 {
+    $today = time();//mktime(0, 0, 0, date("m"), date("d"), date("Y"));
 
+    //Birthday is in the past, so we need to add a year
+    while ($birthday < $today) {
+        $birthday = strtotime("+1 year", $birthday);
+    }
+
+    //Number round down to prevent weird 'half' nights
+    $differenceDays = getDifferenceBetweenDates($today, $birthday);
+    return ceil($differenceDays);
 }
 ?>
 <!doctype html>
@@ -38,8 +52,8 @@ function getNightsTillBirthday($birthday)
 
             <div>Datum vandaag: <?= $today; ?></div>
             <div>Datum vorige week: <?= $lastWeek; ?></div>
-            <div>Verschil tussen dagen: <?= getDifferenceBetweenDates( ); ?></div>
-            <div>Nachtjes tot verjaardag: <?= getNightsTillBirthday(); ?></div>
+            <div>Verschil tussen dagen: <?= getDifferenceBetweenDates( strtotime('05-02-2015'), strtotime('12-08-2015') ); ?></div>
+            <div>Nachtjes tot verjaardag: <?= getNightsTillBirthday(strtotime('05-02-1999')); ?></div>
         </section>
 	</body>
 </html>
