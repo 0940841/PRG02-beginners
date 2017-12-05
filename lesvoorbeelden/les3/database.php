@@ -14,7 +14,8 @@ $db = mysqli_connect($host, $username, $password, $database)
 
 // Stap 3: Query naar de database opbouwen. Het is belangrijk dat dit
 //         apart gebeurt zodat je deze apart kunt tonen
-$query = "SELECT * FROM albums WHERE id = $id";
+
+$query = "SELECT * FROM albums";
 // Stap 4: Query uitvoeren op de database. Als dit goed gaat, geeft
 //         mysqli_query een mysqli_result terug. Let op, dit is een tabel.
 // Stap 5: Foutafhandeling. Als de query niet uitgevoerd kan worden treedt
@@ -54,11 +55,12 @@ mysqli_close($db);
 <body>
     <ul>
     <?php
-    // $albums wordt doorlopen met een foreach loop en zo kunnen de onderdelen
-    // van een album getoond worden.
-    foreach ($albums as $album) {
-    ?>
-        <li><?= $album['name'] ?> <?= $album['artist']?></li>
+        // $albums wordt doorlopen met een foreach loop en zo kunnen de onderdelen
+        // van een album getoond worden.
+        foreach ($albums as $album) { ?>
+
+            <li><?= $album['name'] ?> <?= $album['artist']?></li>
+
     <?php } ?>
     </ul>
 </body>

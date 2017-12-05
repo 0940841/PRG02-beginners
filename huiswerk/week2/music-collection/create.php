@@ -20,7 +20,7 @@ if (isset($_POST['submit']))
 	<head>
 		<meta charset="utf-8" />
 		<title>Create new album</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body >
         <section>
