@@ -37,6 +37,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
     <form action="" method="post">
+
         Naam: <input type="text" name="albumName" value="<?php if(isset($albumName)) { echo $albumName; } ?>"/>
         <input type="submit" name="submit" value="Opslaan"/>
         <span class="error"><?= $error ?></span>
